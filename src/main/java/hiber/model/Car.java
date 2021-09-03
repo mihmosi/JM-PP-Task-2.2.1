@@ -1,6 +1,9 @@
 package hiber.model;
 
+import org.springframework.lang.NonNull;
+
 import javax.persistence.*;
+
 @Entity
 @Table(name = "cars")
 public class Car {
@@ -11,10 +14,11 @@ public class Car {
     @Column(name = "model")
     private String model;
 
-    @Column(name="series")
+    @Column(name = "series")
     private int series;
 
-    public Car(){}
+    public Car() {
+    }
 
     public Car(String model, int series) {
         this.model = model;
